@@ -1,0 +1,11 @@
+apiVersion: "security.istio.io/v1beta1"
+kind: "PeerAuthentication"
+metadata:
+  name: "bar-peerauthentication"
+  namespace: "bar"
+spec:
+  selector:
+    matchLabels:
+      app: auth-test
+  mtls:
+    mode: STRICT
